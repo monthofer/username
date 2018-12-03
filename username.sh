@@ -1,18 +1,12 @@
 #! /bin/bash
-# zip.sh
+# username.sh
+echo "Your username must contain lowercase letters, numbers and underscores and be 3-12 characters long."
+echo "Username must start with a lowercase lettter."
 echo "Enter your username: "
-read ZIP
-while echo $ZIP | egrep -v "^[0-9]{3-12}$" > /dev/null 2>&1
+read USERNAME
+while echo $USERNAME | egrep -v "^[a-z][a-z0-9\_]{3,12}$" > /dev/null 2>&1
 do
-	echo "Choose your username between 3 and 12 characters"
-	echo "You can only enter lower case letters, numbers, and underscore"
-	echo "Enter your username "
-	read ZIP
-	echo ${password:0:1}
-	case ${password:0:1} in
-	[A-Z])
-		echo "the passowrd cannot begin with an uppercase letter"
- 
+	echo "Enter a valid username: "
+	read USERNAME
 done
 echo "Thank you"
-
