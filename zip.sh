@@ -9,4 +9,3 @@ do
 	read ZIP
 done
 echo "Thank you"
-
